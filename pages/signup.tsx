@@ -7,8 +7,7 @@ const Index: NextPage = () => {
 };
 
 Index.getInitialProps = async () => {
-  const res = await api.get("users/me").catch(e => e);
-  console.log("res! ", res);
+  await api.get("users/me").catch(e => e);
 };
 
 export default Index;

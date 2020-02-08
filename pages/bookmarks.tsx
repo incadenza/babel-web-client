@@ -39,7 +39,6 @@ Index.getInitialProps = async ctx => {
       bookmarks: res.bookmarks
     };
   } catch ({ response }) {
-    console.log("error!"!, response);
     return { folders: {}, bookmarks: [] };
   }
 };
