@@ -1,5 +1,5 @@
 module.exports = {
   env: {
-    API_URL: "http://localhost:8080"
+    API_URL: "https://api.babel-library.app"
   }
 };
