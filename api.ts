@@ -3,7 +3,7 @@ import cookie from "cookie";
 import { NextPageContext } from "next";
 
 const api = ky.create({
-  prefixUrl: "http://localhost:8080",
+  prefixUrl: process.env.API_URL,
   credentials: "include"
 });
 
