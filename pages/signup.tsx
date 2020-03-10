@@ -1,13 +1,23 @@
 import React from "react";
 import { NextPage } from "next";
-import api from "../api";
+import { unauthenticatedRequest } from "../api";
+import styled from "styled-components";
 
-const Index: NextPage = () => {
-  return <h2>Hello world</h2>;
+const Header = styled.h1`
+  color: red;
+`;
+
+const Signup: NextPage = () => {
+  return (
+    <div>
+      <Header>Signup</Header>
+    </div>
+  );
 };
 
-Index.getInitialProps = async () => {
-  await api.get("users/me").catch(e => e);
+Signup.getInitialProps = async ctx => {
+  await unauthenticatedRequest(ctx, "users/me");
+  return {};
 };
 
-export default Index;
+export default Signup;
